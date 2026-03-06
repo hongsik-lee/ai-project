@@ -35,7 +35,7 @@ jobs:
         working-directory: ai-board-project
 
       - name: Install react dependencies
-        run: npm ci
+        run: npm install
         working-directory: ai-react-project
 
       - name: Build board
@@ -54,6 +54,11 @@ jobs:
         run: |
           mkdir -p ai-board-project/dist/react
           cp -R ai-react-project/build/. ai-board-project/dist/react/
+
+      - name: Merge view page into pages artifact
+        run: |
+          mkdir -p ai-board-project/dist/view
+          cp -R ai-view-project/. ai-board-project/dist/view/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
