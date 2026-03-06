@@ -1,5 +1,37 @@
 @use "./variables" as vars;
 
+$breakpoints: (
+  desktop: vars.$bp-desktop,
+  laptop: vars.$bp-laptop,
+  tablet: vars.$bp-tablet,
+  mobile: vars.$bp-mobile,
+  small: vars.$bp-small,
+);
+
+@mixin down($device) {
+  $width: map-get($breakpoints, $device);
+
+  @if $width == null {
+    @error "Unknown breakpoint: #{$device}";
+  }
+
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin up($device) {
+  $width: map-get($breakpoints, $device);
+
+  @if $width == null {
+    @error "Unknown breakpoint: #{$device}";
+  }
+
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
 @mixin button-base {
   cursor: pointer;
   border: none;
