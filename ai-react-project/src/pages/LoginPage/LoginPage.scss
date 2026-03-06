@@ -1,0 +1,64 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.login-page {
+	@include m.container;
+	min-height: calc(100vh - 148px);
+	display: grid;
+	place-items: center;
+	padding: 2.5rem 0;
+}
+
+.login-card {
+	@include m.card;
+	width: min(100%, 460px);
+	padding: 2rem;
+	display: grid;
+	gap: 0.7rem;
+
+	h1 {
+		margin: 0;
+		font-size: 1.7rem;
+	}
+
+	p {
+		margin: 0 0 0.6rem;
+		color: v.$color-text-sub;
+		line-height: 1.55;
+	}
+}
+
+.login-form {
+	display: grid;
+	gap: 0.7rem;
+
+	label {
+		margin-top: 0.4rem;
+		font-size: 0.92rem;
+		font-weight: 600;
+		color: v.$color-text-sub;
+	}
+
+	input {
+		width: 100%;
+		border: 1px solid v.$color-border;
+		border-radius: v.$radius-sm;
+		padding: 0.76rem 0.85rem;
+		font: inherit;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+		&:focus {
+			outline: none;
+			border-color: v.$color-primary;
+			box-shadow: 0 0 0 3px rgba(v.$color-primary, 0.15);
+		}
+	}
+
+	button {
+		@include m.primary-button;
+		margin-top: 0.8rem;
+		width: 100%;
+		padding-block: 0.8rem;
+	}
+}
+

@@ -1,0 +1,55 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid v.$color-border;
+  background: rgba(v.$color-surface, 0.95);
+  backdrop-filter: blur(8px);
+
+  &__inner {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+  }
+
+  &__brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: v.$color-primary-dark;
+    letter-spacing: -0.02em;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    padding: 0.5rem 0.9rem;
+    border-radius: v.$radius-pill;
+    color: v.$color-text-sub;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: v.$color-bg;
+      color: v.$color-primary-dark;
+    }
+
+    &--active {
+      background: rgba(v.$color-primary, 0.12);
+      color: v.$color-primary-dark;
+    }
+  }
+
+  &__button {
+    @include m.primary-button;
+    margin-left: 0.4rem;
+  }
+}

@@ -1,0 +1,33 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.footer {
+  border-top: 1px solid v.$color-border;
+  background: v.$color-surface;
+
+  &__inner {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 76px;
+    color: v.$color-text-sub;
+
+    p,
+    small {
+      margin: 0;
+    }
+
+    small {
+      color: v.$color-muted;
+    }
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-block: 1rem;
+    }
+  }
+}

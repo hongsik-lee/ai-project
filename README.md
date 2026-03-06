@@ -1,35 +1,37 @@
-# AI Board Project
+# AI Project
 
-간단한 게시판 기능을 가진 대시보드형 웹 프로젝트입니다.
+3개의 프로젝트를 하나의 저장소로 관리하는 모노레포입니다.
 
-## 홈페이지(main) 구성
+## 폴더 구조
 
-홈페이지는 3개 영역으로 구성됩니다.
+- `ai-board-project` : 기존 게시판 프로젝트 (Vite + Vanilla JS + Sass)
+- `ai-react-project` : React 프로젝트 (현재 작업 중)
+- `ai-view-project` : 추후 개발 예정 프로젝트
 
-- **왼쪽 사이드 메뉴**: 대시보드, 게시글 목록, 글 작성, 마이페이지, 프로필, 로그인 이동
-- **가운데 콘텐츠**: 게시글 요약 카드(총 게시글/최근 글/체크리스트 잔여), 최근 게시글 리스트
-- **오른쪽 패널**: 체크리스트(TODO) 추가/완료/삭제 기능
+## 프로젝트별 실행
 
-## 핵심 기능
-
-- 게시글 작성, 목록 조회, 상세 조회
-- 상세 페이지 댓글 작성/조회
-- 현재 경로 기준 사이드 메뉴 하이라이트
-- 반응형 레이아웃(모바일/태블릿/데스크톱)
-
-## 기술 스택
-
-- Vanilla JavaScript (ES Modules)
-- Vite
-- Dart Sass (SCSS)
-- JSON Server (로컬 API)
-
-## 실행 방법
+### 1) ai-board-project
 
 ```bash
+cd ai-board-project
 npm install
 npm run dev
 npm run api
 ```
 
-배포 환경에서는 API 서버가 없을 경우 브라우저 로컬 저장소 fallback으로 동작합니다.
+### 2) ai-react-project
+
+```bash
+cd ai-react-project
+npm install
+npm start
+```
+
+### 3) ai-view-project
+
+추후 생성 예정
+
+## 참고
+
+- 기존 `ai-board-project` 루트 파일들은 이력 보존을 위해 `ai-board-project/` 하위로 이동했습니다.
+- 원격 저장소 이름을 `ai-project`로 바꾼 뒤, 로컬 remote URL도 함께 변경해 주세요.
