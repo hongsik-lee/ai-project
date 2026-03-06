@@ -29,9 +29,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: ai-board-project
 
       - name: Build
         run: npm run build
+        working-directory: ai-board-project
         env:
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
 
@@ -41,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./ai-board-project/dist
 
   deploy:
     environment:

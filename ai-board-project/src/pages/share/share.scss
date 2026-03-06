@@ -1,7 +1,7 @@
 @use "../../styles/abstracts/variables" as vars;
 @use "../../styles/abstracts/mixins" as mixins;
 
-.share-page {
+.hub-page {
   max-width: 1080px;
   margin: 2.5rem auto;
   padding: 0 1.5rem 2rem;
@@ -23,7 +23,7 @@
   }
 }
 
-.share-sections {
+.project-sections {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -40,6 +40,12 @@
     font-size: 1.1rem;
     font-weight: 700;
   }
+}
+
+.project-stack {
+  margin: 0.55rem 0 0;
+  color: vars.$color-muted;
+  font-size: 0.93rem;
 }
 
 .share-links {
@@ -67,12 +73,12 @@
 }
 
 @include mixins.down(tablet) {
-  .share-page {
+  .hub-page {
     margin: 1.4rem auto;
     padding: 0 1rem 1.25rem;
   }
 
-  .share-sections {
+  .project-sections {
     grid-template-columns: 1fr;
   }
 }

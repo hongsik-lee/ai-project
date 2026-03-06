@@ -33,8 +33,8 @@ npm start
 
 ## 공유 URL
 
-- 공유 페이지 (GitHub Pages): https://hongsik-lee.github.io/ai-project/
-- 로컬 공유 페이지: http://localhost:5173/
+- 비주얼 허브 (GitHub Pages): https://hongsik-lee.github.io/ai-project/
+- 로컬 비주얼 허브: http://localhost:5173/
 
 ## 참고
 
