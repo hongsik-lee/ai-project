@@ -31,6 +31,11 @@ npm start
 
 추후 생성 예정
 
+## 공유 URL
+
+- 공유 페이지 (GitHub Pages): https://hongsik-lee.github.io/ai-project/
+- 로컬 공유 페이지: http://localhost:5173/
+
 ## 참고
 
 - 기존 `ai-board-project` 루트 파일들은 이력 보존을 위해 `ai-board-project/` 하위로 이동했습니다.

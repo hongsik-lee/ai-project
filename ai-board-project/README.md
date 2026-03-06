@@ -32,4 +32,9 @@ npm run dev
 npm run api
 ```
 
+## 공유 URL
+
+- 공유 페이지 (GitHub Pages): https://hongsik-lee.github.io/ai-project/
+- 로컬 공유 페이지: http://localhost:5173/
+
 배포 환경에서는 API 서버가 없을 경우 브라우저 로컬 저장소 fallback으로 동작합니다.

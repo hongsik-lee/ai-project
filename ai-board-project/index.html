@@ -1,18 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Board Project</title>
-    <link rel="stylesheet" href="/src/styles/main.scss">
+    <link rel="stylesheet" href="/src/styles/main.scss" />
   </head>
   <body>
-    <header data-component="header"></header>
-    <main>
-      <h1>메인 페이지</h1>
+    <main class="share-page">
+      <section class="share-hero">
+        <h1>AI Board 공유 페이지</h1>
+        <p>아래 3개 섹션에서 원하는 화면으로 바로 이동할 수 있습니다.</p>
+      </section>
+
+      <section class="share-sections" aria-label="페이지 바로가기">
+        <article class="share-section">
+          <h2>1. 메인 대시보드</h2>
+          <ul class="share-links">
+            <li><a data-route-link="dashboard" href="#">대시보드 페이지</a></li>
+          </ul>
+        </article>
+
+        <article class="share-section">
+          <h2>2. 게시글 기능</h2>
+          <ul class="share-links">
+            <li><a data-route-link="posts" href="#">게시글 목록</a></li>
+            <li><a data-route-link="write" href="#">글 작성</a></li>
+            <li><a data-route-link="postDetail" data-route-id="1" href="#">게시글 상세 (샘플)</a></li>
+          </ul>
+        </article>
+
+        <article class="share-section">
+          <h2>3. 사용자 기능</h2>
+          <ul class="share-links">
+            <li><a data-route-link="login" href="#">로그인</a></li>
+            <li><a data-route-link="mypage" href="#">마이페이지</a></li>
+            <li><a data-route-link="profile" href="#">프로필</a></li>
+          </ul>
+        </article>
+      </section>
     </main>
-    <footer data-component="footer"></footer>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/share/share.js"></script>
   </body>
 </html>
