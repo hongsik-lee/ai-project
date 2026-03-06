@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(180deg, vars.$color-page-start 0%, vars.$color-page-end 100%);
+	min-height: 100vh;
+}
+
+body.with-sidebar-nav {
+	display: grid;
+	grid-template-columns: 250px minmax(0, 1fr);
+	grid-template-rows: minmax(0, 1fr) auto;
+}
+
+body.with-sidebar-nav > header[data-component="header"] {
+	grid-column: 1;
+	grid-row: 1 / -1;
+}
+
+body.with-sidebar-nav > main {
+	grid-column: 2;
+	grid-row: 1;
+	min-width: 0;
+}
+
+body.with-sidebar-nav > footer[data-component="footer"] {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+body.with-sidebar-nav .footer {
+	margin-top: 0;
+}
+
+.subpage-layout {
+	max-width: 1080px;
+	margin: 2rem auto;
+	padding: 0 1.5rem;
+}
+
+@media (max-width: 860px) {
+	body.with-sidebar-nav {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto minmax(0, 1fr) auto;
+	}
+
+	body.with-sidebar-nav > header[data-component="header"],
+	body.with-sidebar-nav > main,
+	body.with-sidebar-nav > footer[data-component="footer"] {
+		grid-column: 1;
+	}
+
+	body.with-sidebar-nav > header[data-component="header"] {
+		grid-row: 1;
+	}
+
+	body.with-sidebar-nav > main {
+		grid-row: 2;
+	}
+
+	body.with-sidebar-nav > footer[data-component="footer"] {
+		grid-row: 3;
+	}
+}
+
+.subpage-card {
+	@include mixins.card(vars.$color-surface);
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	border-radius: 1rem;
+	padding: 1.25rem;
+}
+
+.subpage-head {
+	margin-bottom: 1rem;
+
+	h1 {
+		margin: 0;
+		font-size: 1.65rem;
+		font-weight: 800;
+	}
+
+	p {
+		margin: 0.45rem 0 0;
+		color: vars.$color-muted;
+		font-size: 0.92rem;
+	}
+}

@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "첫 번째 글",
+      "author": "admin",
+      "content": "게시판 테스트",
+      "date": "2026-03-05"
+    },
+    {
+      "id": "2",
+      "title": "AI 게시판 실험",
+      "author": "hyesu",
+      "content": "AI 자동 생성 프로젝트",
+      "date": "2026-03-05"
+    },
+    {
+      "id": "00c6",
+      "title": "write 페이지 프롬프트",
+      "content": "Project stack rules (VERY IMPORTANT):\nBuild with Vanilla JavaScript\nUse Vite\nUse Dart Sass (SCSS)\nUse Component-based architecture\nUse ES Modules\nUse SPA Router\nDo NOT use React / Vue / frameworks\n\nCreate a page for the project using the following requirements.\n\nPAGE NAME:\nWrite Page\n\nPAGE ROLE:\nUsers can create a new post.\n\nREQUIRED FEATURES:\n\n* title input\n* content textarea\n* submit button\n* validation\n* API request\n\nUI STRUCTURE:\n\nHeader\nForm\nInput field\nTextarea\nSubmit button\n\nReturn:\n\n1 HTML Template\n2 JavaScript Logic\n3 Required Components\n4 API Request Structure\n5 SCSS Structure\n6 File locations\n\nPAGE NAME:\nWrite Page\n\nPAGE ROLE:\nUsers can create a new post.\n\nREQUIRED FEATURES:\n\n* title input\n* content textarea\n* submit button\n* validation\n* API request\n\nUI STRUCTURE:\n\nHeader\nForm\nInput field\nTextarea\nSubmit button\n\nReturn:\n\n1 HTML Template\n2 JavaScript Logic\n3 Required Components\n4 API Request Structure\n5 SCSS Structure\n6 File locations",
+      "date": "2026-03-06T01:19:25.582Z",
+      "author": "익명"
+    },
+    {
+      "id": "4825",
+      "title": "vite 실행",
+      "content": "npm run dev\n배표용 빌드 : npm run build\n\n\nbuild 예시) \n\ndist\n ├ assets\n │   ├ index-2d9fa.js\n │   ├ index-31ad.css\n │\n ├ index.html",
+      "date": "2026-03-06T01:55:41.765Z",
+      "author": "익명"
+    },
+    {
+      "id": "8bf6",
+      "title": "ddd",
+      "content": "ddd",
+      "date": "2026-03-06T04:23:02.174Z",
+      "author": "익명"
+    },
+    {
+      "id": "83b3",
+      "title": "작성가능!",
+      "content": "ㅎㅎ",
+      "date": "2026-03-06T04:29:48.278Z",
+      "author": "익명"
+    }
+  ],
+  "comments": [
+    {
+      "id": "fd09",
+      "postId": "8bf6",
+      "text": "댓글 저장 테스트",
+      "author": "익명",
+      "date": "2026-03-06T04:36:00.000Z"
+    },
+    {
+      "id": "26aa",
+      "postId": "00c6",
+      "text": "멋지다!",
+      "author": "익명",
+      "date": "2026-03-06T04:37:11.733Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
